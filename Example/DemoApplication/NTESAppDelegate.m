@@ -32,6 +32,8 @@
     //注入 NIMKit 布局管理器
     [[NIMKit sharedKit] registerLayoutConfig:[NTESCellLayoutConfig new]];
     
+    [NIMKit sharedKit].config.rightBubbleSettings.textSetting.font = [UIFont systemFontOfSize:16];
+    
     return YES;
 }
 

@@ -10,11 +10,13 @@
 #import "NIMInputEmoticonParser.h"
 #import "NIMInputEmoticonManager.h"
 #import "UIImage+NIMKit.h"
+#import "NIMKit.h"
 
 @implementation M80AttributedLabel (NIMKit)
 - (void)nim_setText:(NSString *)text
 {
     [self setText:@""];
+    
     NSArray *tokens = [[NIMInputEmoticonParser currentParser] tokens:text];
     for (NIMInputTextToken *token in tokens)
     {
@@ -25,7 +27,7 @@
             if (image)
             {
                 [self appendImage:image
-                          maxSize:CGSizeMake(18, 18)];
+                          maxSize:CGSizeMake(20, 20)];
             }
         }
         else

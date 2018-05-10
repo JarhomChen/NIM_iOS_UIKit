@@ -28,6 +28,9 @@
     CGFloat bubbleLeftToContent  = 14;
     CGFloat contentRightToBubble = 14;
     CGFloat msgContentMaxWidth = (msgBubbleMaxWidth - contentRightToBubble - bubbleLeftToContent);
+    
+    self.label.font = [[NIMKit sharedKit].config setting:message].font;
+    
     return [self.label sizeThatFits:CGSizeMake(msgContentMaxWidth, CGFLOAT_MAX)];
 }
 

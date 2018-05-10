@@ -6,7 +6,7 @@
 //  Copyright © 2017年 chrisRay. All rights reserved.
 //
 
-#import <NIMKit/NIMKit.h>
+#import <NIMKit_FixByJarhom/NIMKit.h>
 
 @interface NTESSessionListViewController : NIMSessionListViewController
 
