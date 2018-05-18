@@ -51,7 +51,8 @@
     self.messageLabel.nim_width = self.messageLabel.nim_width > MessageLabelMaxWidth ? MessageLabelMaxWidth : self.messageLabel.nim_width;
     if (recent.unreadCount) {
         self.badgeView.hidden = NO;
-        self.badgeView.badgeValue = @(recent.unreadCount).stringValue;
+        NSString *badgeValue = recent.unreadCount>99? @"99+":@(recent.unreadCount).stringValue;
+        self.badgeView.badgeValue = badgeValue;
     }else{
         self.badgeView.hidden = YES;
     }
